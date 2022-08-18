@@ -1,0 +1,16 @@
+{
+  "name": "bootstrap",
+  "version": "1.0.0",
+  "description": "proyecto dashboard",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "alvaro ruiz",
+  "license": "ISC",
+  "dependencies": {
+    "bootstrap": "^5.2.0",
+    "boxicons": "^2.1.2",
+    "chart.js": "^3.9.1"
+  }
+}
