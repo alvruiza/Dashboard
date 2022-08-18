@@ -1,0 +1,1 @@
+Proyecto muestra una propuesta de un dashboard para la app de inverisión Fintual.
