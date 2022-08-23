@@ -274,3 +274,51 @@ body.dark .switch::before {
     width: calc(100% - 88px);   
    
 }
+
+/* diseño paneles */
+
+.usdrow {
+    
+}
+
+.usdcol {
+    width:50%;
+    
+}
+
+.usdpanel {
+    width: 100%;
+}
+
+.usd {    
+    background: var(--sidebar-color);
+    color: var(--text-color);
+    font-size: 15px;
+    font-weight: 500;
+    width: 95%;
+    height: 10%;
+    margin-left: 5%;
+    margin-top: 2%;
+    border-radius: 6px;
+    box-shadow: 1px 1px 3px grey;
+    padding-left: 0%;
+    float:left;
+}
+
+.graphtitle {
+    float:left;
+    width: 100%;
+    margin-left: 2%;
+    margin-top: 2%;    
+}
+
+.valuebox {
+    float: right;
+    width: 30%;
+    margin-top: 0%;
+}
+
+.usdvalue {
+    padding-left: 0%;
+}
+

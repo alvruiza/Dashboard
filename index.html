@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="./node_modules/bootstrap/dist/css/bootstrap.min.css" type="text/css">
-    <link rel="stylesheet" href="./node_modules/boxicons/css/boxicons.min.css" type="text/css">
+    <link rel="stylesheet" href="./node_modules/boxicons/css/boxicons.min.css" type="text/css">    
     <link rel="stylesheet" href="./assets/style.css" type="text/css">
 </head>
 <body>
@@ -87,12 +87,54 @@
     </nav>
 
     <section class="home">
-        <div class="text">Inicio</div>    
+        <div class="text">Inicio</div>
+        <div class="container-fluid">
+            <div class="row usdrow">
+                <div class="col-lg-5 col-md-6 col-xs-6 usdcol">
+                    <div class="usdpanel">
+                        <div class="container-fluid usd">
+                            <div class="row justify-content-center graphtitle">
+                                <div class="col-lg-4 col-md-4 col-xs-4">
+                                    <p class="usdtitle">USDCLP</p>
+                                </div>
+                                <div class="col-lg-4 col-md-4 col-xs-4">
+                                    <p class="usdvalue"></p>                         
+                                </div>
+                                <div class="col-lg-4 col-md-4 col-xs-4">
+                                    <p class="usdvar">var</p>
+                                </div>                            
+                           </div>                
+                            <canvas id="usdGraph">
+                            </canvas>
+                        </div>    
+                    </div>                                   
+               </div> 
+               <div class="col-lg-6 col-md-6 col-xs-6">
+                <div class="ufpanel">
+                    <div class="container-fluid usd">
+                        <div class="row justify-content-center uftitle">
+                            <div class="col-lg-4 col-md-4 col-xs-4">
+                                <p class="uftitle">UF Hoy</p>
+                            </div>
+                            <div class="col-lg-4 col-md-4 col-xs-4">
+                                <p class="ufvalue">$</p>
+                            </div>
+                            <div class="col-lg-4 col-md-4 col-xs-4">
+                                <p class="ufvar">var</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                </div>        
+            </div>
+        </div>    
+        
     </section>
-    
+
     <script src="./node_modules/bootstrap/dist/js/bootstrap.min.js" rel="text/script"></script>
+    <script src="./node_modules/chart.js/dist/chart.min.js" rel="text/script"></script>
     <script src="./assets/sidebar.js"></script>
     <script src="./node_modules/boxicons/dist/boxicons.js" rel="text/script"></script>
-    <script src="./assets/main.js" rel="text/script"></script>
+    <script src="./assets/main.js" type="module"></script>    
 </body>
 </html>
