@@ -4,14 +4,16 @@ const body = document.querySelector("body"),
       modeSwitch = body.querySelector(".toggle-switch"),
       modeText = body.querySelector(".switchtxt"),
       logo = body.querySelector(".logo");
+      
 
-    modeSwitch.addEventListener("click", () => {
+    modeSwitch.addEventListener("click", () => {        
         body.classList.toggle("dark")
-
         if (body.classList.contains("dark")) {
             modeText.innerText = "Modo Luz"
+            localStorage.setItem("mode", "dark")
         } else {
             modeText.innerText = "Modo Dark"
+            localStorage.setItem("mode", "light")
         }        
         logoChange()    
     })
@@ -33,3 +35,18 @@ const body = document.querySelector("body"),
             document.getElementById("logo").src="https://i.postimg.cc/pVSbKnXk/Dise-o-sin-t-tulo-98.png";
         }
       }
+
+      function setMode() {
+          let mode = localStorage.getItem("mode")
+          if (mode == "dark") {
+              body.classList.toggle("dark")
+              logoChange()            
+          } 
+      }
+        
+      setMode()
+
+ 
+
+
+      

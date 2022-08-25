@@ -24,16 +24,16 @@
         <div class="barmenu">
             <div class="menu">
                 <ul class="links">
-                    <li class="linklist">
+                    <li class="linklist homeli">
                         <a href="#">
                         <i class='bx bx-home'></i>
                         <span class="linktxt">Home</span>
                         </a>
                     </li>
-                    <li class="linklist">
+                    <li class="linklist indexli">
                         <a href="#">
                         <i class='bx bx-bar-chart-alt-2'></i>
-                        <span class="linktxt">Gráficos</span>
+                        <span class="linktxt">Indicadores</span>
                         </a>
                     </li>
                     <li class="linklist">
@@ -85,23 +85,25 @@
             </div>
         </div>
     </nav>
-
     <section class="home">
         <div class="text">Inicio</div>
         <div class="container-fluid">
             <div class="row usdrow">
-                <div class="col-lg-5 col-md-6 col-xs-6 usdcol">
+                <div class="col-lg-6 col-md-6 col-xs-6">
                     <div class="usdpanel">
                         <div class="container-fluid usd">
                             <div class="row justify-content-center graphtitle">
-                                <div class="col-lg-4 col-md-4 col-xs-4">
+                                <div class="col-lg-3 col-md-3 col-xs-3">
+                                    <p class="tag">indicador</p>
                                     <p class="usdtitle">USDCLP</p>
                                 </div>
                                 <div class="col-lg-4 col-md-4 col-xs-4">
+                                    <h6 class="tag">valor actual</h6>
                                     <p class="usdvalue"></p>                         
                                 </div>
-                                <div class="col-lg-4 col-md-4 col-xs-4">
-                                    <p class="usdvar">var</p>
+                                <div class="col-lg-5 col-md-5 col-xs-5">
+                                    <h6 class="tag">variación</h6>
+                                    <p class="usdvar" id="usdvar">var</p>
                                 </div>                            
                            </div>                
                             <canvas id="usdGraph">
@@ -112,23 +114,49 @@
                <div class="col-lg-6 col-md-6 col-xs-6">
                 <div class="ufpanel">
                     <div class="container-fluid usd">
-                        <div class="row justify-content-center uftitle">
-                            <div class="col-lg-4 col-md-4 col-xs-4">
+                        <div class="row justify-content-center graphtitle">
+                            <div class="col-lg-3 col-md-3 col-xs-3">
+                                <p class="tag">indicador</p>
                                 <p class="uftitle">UF Hoy</p>
                             </div>
                             <div class="col-lg-4 col-md-4 col-xs-4">
+                                <p class="tag">valor actual</p>
                                 <p class="ufvalue">$</p>
                             </div>
-                            <div class="col-lg-4 col-md-4 col-xs-4">
+                            <div class="col-lg-5 col-md-5 col-xs-5">
+                                <h6 class="tag">variación</h6>
                                 <p class="ufvar">var</p>
                             </div>
+                            <canvas id="ufGraph"></canvas>
                         </div>
                     </div>
                 </div>
                 </div>        
             </div>
-        </div>    
-        
+            <div class="row utmrow">
+                <div class="col-lg-6 col-md-6 col-xs-6">
+                    <div class="utmpanel">
+                        <div class="container-fluid usd">
+                            <div class="row justify-content-center graphtitle">
+                                <div class="col-lg-3 col-md-3 col-xs-3">
+                                    <p class="tag">indicador</p>
+                                    <p class="utmh1">UTM</p>
+                                </div>
+                                <div class="col-lg-4 col-md-4 col-xs-4">
+                                    <h6 class="tag">valor actual</h6>
+                                    <p class="utmvalue">$</p>
+                                </div>
+                                <div class="col-lg-5 col-md-5 col-xs-5">
+                                    <h6 class="tag">variación</h6>
+                                    <p class="utmvar">var</p>
+                                </div>
+                                <canvas id="utmGraph"></canvas>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>  
     </section>
 
     <script src="./node_modules/bootstrap/dist/js/bootstrap.min.js" rel="text/script"></script>

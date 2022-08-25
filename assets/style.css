@@ -277,10 +277,6 @@ body.dark .switch::before {
 
 /* diseño paneles */
 
-.usdrow {
-    
-}
-
 .usdcol {
     width:50%;
     
@@ -306,19 +302,56 @@ body.dark .switch::before {
 }
 
 .graphtitle {
-    float:left;
+    display: flex;
+    
     width: 100%;
-    margin-left: 2%;
-    margin-top: 2%;    
-}
-
-.valuebox {
-    float: right;
-    width: 30%;
-    margin-top: 0%;
+    margin-left: 0%;
+    margin-top: 2%;
+    line-height: 10%;        
 }
 
 .usdvalue {
     padding-left: 0%;
+}
+
+.negative{
+    color: rgb(248, 52, 52);
+    font-weight: 700;
+    font-size: 16px;
+}
+
+.utmcol{
+    width: 50%;
+}
+
+.utmvar {
+    color:rgb(60, 224, 60);
+    font-weight: 700;
+    font-size: 16px;
+}
+
+.ufvar {
+    color:rgb(60, 224, 60);
+    font-weight: 700;
+    font-size: 16px;
+}
+
+.usdvalue {
+    font-size: 18px;
+    font-weight: 700;;
+}
+
+.ufvalue {
+    font-size: 18px;
+    font-weight: 700;
+}
+
+.utmvalue {
+    font-size: 18px;
+    font-weight: 700;
+}
+
+.tag {
+    font-size: 11px;
 }
 
