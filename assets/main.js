@@ -1,19 +1,25 @@
 const body = document.querySelector("body"), 
       index = body.querySelector(".indexli"),
       home =  body.querySelector(".homeli"),
-      section = body.querySelector(".home");
+      section = body.querySelector(".home"),
+      funds = body.querySelector(".fundsli");
      
-
 
 import ufvalue from "./uf.js"
 import utmValue from "./utm.js"
-import usdValue from "./usd.js";
+import usdValue from "./usd.js"
+import riskyValues from "./riskynorris.js"
+import pittValues from "./pitt.js";
+import clooneyValues from "./clooney.js";
+import streepValues from "./streep.js";
+import mixChart from "./fundsgraph.js";
 
 
-usdValue()
-ufvalue()
-utmValue()
-
+riskyValues()
+pittValues()
+clooneyValues()
+streepValues()
+mixChart()
 
 index.addEventListener("click", () => {
     section.innerHTML = `<div class="text">Indicadores</div>
@@ -95,5 +101,56 @@ index.addEventListener("click", () => {
 })
 
 home.addEventListener("click", () => { 
-    section.innerHTML = ``
+    section.innerHTML = ``    
+ })
+
+funds.addEventListener("click", () => {
+    section.innerHTML = `<div class="text">Fondos</div>
+    <div class="container-fluid">
+        <div class="row justify-content-center">
+            <div class="col-lg-3 col-md-6 col-xs-6">
+                <div class="container-fluid ratiopanel">                      
+                    <span class="fundtitle">Risky Norris</span>                        
+                    <p class="riskyprice"></p>
+                    <p class="riskytag">valor cuota al cierre jornada anterior</p>
+                    <p class="riskyvar" id="riskyvar">var</p>
+                    <p class="riskytag">variación diaria</p>                        
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6 col-xs-6">
+                <div class="container-fluid ratiopanel">                      
+                    <span class="fundtitle">Moderate Pitt</span>                        
+                    <p class="pittprice"></p>
+                    <p class="riskytag">valor cuota al cierre jornada anterior</p>
+                    <p class="pittvar" id="pittvar">var</p>
+                    <p class="riskytag">variación diaria</p>                        
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6 col-xs-6">
+                <div class="container-fluid ratiopanel">                      
+                    <span class="fundtitle">Conservative Clooney</span>                        
+                    <p class="clooneyprice"></p>
+                    <p class="riskytag">valor cuota al cierre jornada anterior</p>
+                    <p class="clooneyvar" id="clooneyvar">var</p>
+                    <p class="riskytag">variación diaria</p>                        
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6 col-xs-6">
+                <div class="container-fluid ratiopanel">                      
+                    <span class="fundtitle">Very Conservative Streep</span>                        
+                    <p class="streepprice"></p>
+                    <p class="riskytag">valor cuota al cierre jornada anterior</p>
+                    <p class="streepvar" id="streepvar">var</p>
+                    <p class="riskytag">variación diaria</p>                        
+                </div>
+            </div>                        
+        </div>
+    </div>
+</div>        `
+
+    riskyValues()
+    pittValues()
+    clooneyValues()
+    streepValues()
+    mixChart()
  })
