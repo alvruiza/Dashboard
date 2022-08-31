@@ -124,8 +124,7 @@ function mixChart() {
             })
 
             let riskyPrices = riskyData.data.map(function(index){
-            let prices = index.attributes.price
-            console.log(prices)
+            let prices = index.attributes.price            
             return prices
             })
             data.labels = getLabels.reverse()

@@ -2,7 +2,8 @@ const body = document.querySelector("body"),
       index = body.querySelector(".indexli"),
       home =  body.querySelector(".homeli"),
       section = body.querySelector(".home"),
-      funds = body.querySelector(".fundsli");
+      funds = body.querySelector(".fundsli"),
+      portfolio = body.querySelector(".portfolioli");
      
 
 import ufvalue from "./uf.js"
@@ -13,17 +14,15 @@ import pittValues from "./pitt.js";
 import clooneyValues from "./clooney.js";
 import streepValues from "./streep.js";
 import mixChart from "./fundsgraph.js";
+import getNews from "./news.js"
+import { cxsePrices, esgvPrices, ftecPrices, kompPrices, qqqPrices, smhprices, vtPrices, vtvPrices, drawChart } from "./riskyetfs.js"
 
-
-riskyValues()
-pittValues()
-clooneyValues()
-streepValues()
-mixChart()
+getNews()
+ 
 
 index.addEventListener("click", () => {
     section.innerHTML = `<div class="text">Indicadores</div>
-    <div class="container-fluid">
+    <div class="container-fluid usdcont">
         <div class="row usdrow">
             <div class="col-lg-6 col-md-6 col-xs-6">
                 <div class="usdpanel">
@@ -101,7 +100,43 @@ index.addEventListener("click", () => {
 })
 
 home.addEventListener("click", () => { 
-    section.innerHTML = ``    
+    section.innerHTML = `<div class="text">Inicio</div>
+    <div class="container-fluid">
+        <div class="row justify-content-center newsrow">
+            <div class="col-lg-4 col-md-6 col-xs-6">
+                <div class="container-fluid newspanel">
+                    <h1 class="newstitle">Noticias</h1>
+                    <div class="newsimg">
+                        <img class="newsimgsrc" id="img1" src="https://imageio.forbes.com/specials-images/imageserve/630ce6d8109a80e610401034/0x0.jpg?format=jpg&width=1200">                             
+                    </div>
+                    <h1 class="newsheadline" id="headline1">3M Is Out, Find Other Dividend Stocks Instead</h1>
+                    <p class="newslead" id="lead1">3M Company (MMM) got hammered on Friday afternoon after a federal judge ruled that 230,000 lawsuits for defective military earplugs can proceed against 3M despite the bankruptcy of its subsidiary that sold them. Leave drama behind and walk away.</p>
+                </div>                 
+            </div>
+            <div class="col-lg-4 col-md-6 col-xs-6">
+                <div class="container-fluid newspanel">
+                    <h1 class="newstitle">Noticias</h1>
+                    <div class="newsimg">
+                        <img class="newsimgsrc" id="img2" src="https://imageio.forbes.com/specials-images/imageserve/630ce6d8109a80e610401034/0x0.jpg?format=jpg&width=1200">                             
+                    </div>
+                    <h1 class="newsheadline" id="headline2">3M Is Out, Find Other Dividend Stocks Instead</h1>
+                    <p class="newslead" id="lead2">3M Company (MMM) got hammered on Friday afternoon after a federal judge ruled that 230,000 lawsuits for defective military earplugs can proceed against 3M despite the bankruptcy of its subsidiary that sold them. Leave drama behind and walk away.</p>
+                </div>                 
+            </div>
+            <div class="col-lg-4 col-md-6 col-xs-6">
+                <div class="container-fluid newspanel">
+                    <h1 class="newstitle">Noticias</h1>
+                    <div class="newsimg">
+                        <img class="newsimgsrc" id="img3" src="https://imageio.forbes.com/specials-images/imageserve/630ce6d8109a80e610401034/0x0.jpg?format=jpg&width=1200">                             
+                    </div>
+                    <h1 class="newsheadline" id="headline3">3M Is Out, Find Other Dividend Stocks Instead</h1>
+                    <p class="newslead" id="lead3">3M Company (MMM) got hammered on Friday afternoon after a federal judge ruled that 230,000 lawsuits for defective military earplugs can proceed against 3M despite the bankruptcy of its subsidiary that sold them. Leave drama behind and walk away.</p>
+                </div>                 
+            </div>                
+        </div>
+    </div>`
+    
+    getNews()
  })
 
 funds.addEventListener("click", () => {
@@ -146,11 +181,105 @@ funds.addEventListener("click", () => {
             </div>                        
         </div>
     </div>
-</div>        `
+    <div class="container-fluid">
+        <div class="row justify-content-center">
+            <div class="col-lg-12 col-md-12 col-xs-12 ">
+                <div class="container-fluid fundspanel">
+                    <p class="fundtitle">Comportamiento histórico de los fondos</p>
+                    <canvas id="fundschart"></canvas>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>`
 
-    riskyValues()
-    pittValues()
-    clooneyValues()
-    streepValues()
-    mixChart()
+    //riskyValues()
+    //pittValues()
+    //clooneyValues()
+    //streepValues()
+    //mixChart()
+ })
+
+ portfolio.addEventListener("click", () =>{
+    section.innerHTML = `<div class="container-fluid">
+    <div class="text">Portafolios</div>
+    <div class="row justify-content-center">
+        <div class="col-lg-7 col-md-3 col-xs-6">
+            <div class="etfpanel">
+                <h1 class="etftitle">Risky Norris</h1>
+                <div class="funds">
+                    <table class="etftable">
+                        <tr class="item">
+                            <th class="item">Fondo</th>
+                            <th class="item">% del Portafolio</th>
+                            <th class="item">Hoy</th>                                                                       
+                        </tr>
+                        <tr class="item">
+                            <td class="etf">CXSE</td>
+                            <td class="etfshare">1,22%</td>
+                            <td class="etfprice" id="cxseprice"></td>                                    
+                        </tr>
+                        <tr class="item">
+                            <td class="etf">ESGV</td>
+                            <td class="etfshare">32,46%</td>
+                            <td class="etfprice" id="esgvprice"></td>                                    
+                        </tr>
+                        <tr class="item">
+                            <td class="etf">FTEC</td>
+                            <td class="etfshare">14,77%</td>
+                            <td class="etfprice" id="ftecprice"></td>                                    
+                        </tr>
+                        <tr class="item">
+                            <td class="etf">KOMP</td>
+                            <td class="etfshare">5,03%</td>
+                            <td class="etfprice" id="kompprice"></td>                                    
+                        </tr>
+                        <tr class="item">
+                            <td class="etf">QQQ</td>
+                            <td class="etfshare">2,50%</td>
+                            <td class="etfprice" id="qqqprice"></td>                                    
+                        </tr>
+                        <tr class="item">
+                            <td class="etf">SMH</td>
+                            <td class="etfshare">16,51%</td>
+                            <td class="etfprice" id="smhprice"></td>                                    
+                        </tr>
+                        <tr class="item">
+                            <td class="etf">VT</td>
+                            <td class="etfshare">12,15%</td>
+                            <td class="etfprice" id="vtprice"></td>                                    
+                        </tr>
+                        <tr class="item">
+                            <td class="etf">VTV</td>
+                            <td class="etfprice">8,59%</td>
+                            <td class="etf" id="vtvprice"></td>                                    
+                        </tr>
+                    </table>
+                    <div class="dailyresult">
+                        <p></p>
+                        <h1 class="etftitle">Resultado diario</h1>
+                        <p class="dailyprice">-0,01%</p>
+                    </div>                          
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-4 col-md-2 col-xs-2">
+            <div class="etfchartpanel">
+                <h1 class="etfcharttitle">Composición del Portafolio</h1>
+                <canvas id="etfchart"></canvas>
+            </div>
+        </div>
+    </div>
+</div>`
+
+cxsePrices()
+ esgvPrices()
+ ftecPrices()
+ kompPrices()
+ qqqPrices()
+ smhprices()
+ vtPrices()
+ vtvPrices()
+ usdValue()
+ drawChart()
  })

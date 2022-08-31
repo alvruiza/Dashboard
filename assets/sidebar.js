@@ -19,7 +19,12 @@ const body = document.querySelector("body"),
     })
 
     toggle.addEventListener("click", () => {
-        sidebar.classList.toggle("close")       
+        sidebar.classList.toggle("close")
+        if (sidebar.classList.contains("close")){
+            localStorage.setItem("sbar", "close")       
+        } else {
+            localStorage.setItem("sbar", "open")
+        }
         logoChange()
     })   
     
@@ -41,10 +46,22 @@ const body = document.querySelector("body"),
           if (mode == "dark") {
               body.classList.toggle("dark")
               logoChange()            
-          } 
+            }  
+        }
+        
+        function barMode(){
+          let sbar = localStorage.getItem("sbar")
+          if (sbar == "close") {
+            sidebar.classList.toggle("close")
+            logoChange()
+          } else if (sbar == "close" && mode == "dark") {
+            sidebar.classList.toggle("close")
+            logoChange()
+        }   
       }
         
-      setMode()
+      setMode() 
+      barMode()
 
  
 
