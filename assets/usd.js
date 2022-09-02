@@ -79,8 +79,7 @@ function usdValue() {
 
         function usdSeries() {
             let getSeries = data.map(function(index) {
-                let valor = index.Valor.replace(",",".")
-                console.log(valor)                          
+                let valor = index.Valor.replace(",",".")                                        
                 return valor
             })
 

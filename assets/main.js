@@ -17,9 +17,6 @@ import mixChart from "./fundsgraph.js";
 import getNews from "./news.js" 
 import riskyetfs from "./riskyetfs.js"
 
-
-
-
 getNews()
  
 
