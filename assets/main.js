@@ -95,9 +95,9 @@ index.addEventListener("click", () => {
             </div>
         </div>
     </div>`
-
+    
     usdValue()
-    ufvalue()
+    ufvalue() 
     utmValue()
 
 })

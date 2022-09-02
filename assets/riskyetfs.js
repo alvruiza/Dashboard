@@ -31,7 +31,7 @@ function riskyetfs() {
     
    
         async function cxseValues() {
-            let url = "https://financialmodelingprep.com/api/v3/quote/CXSE?apikey=fd74172c1b79377487aaaeb7c3cdae69"
+            let url = "https://financialmodelingprep.com/api/v3/quote/CXSE?apikey=9939a36cee2d53e5327b9ae07d8ed797"
             let data = await fetch(url)
             data = await data.json()
             return data
@@ -54,7 +54,7 @@ function riskyetfs() {
     
     
         async function esgvValues() {
-            let url = "https://financialmodelingprep.com/api/v3/quote/ESGV?apikey=fd74172c1b79377487aaaeb7c3cdae69"
+            let url = "https://financialmodelingprep.com/api/v3/quote/ESGV?apikey=9939a36cee2d53e5327b9ae07d8ed797"
             let data = await fetch(url)
             data = await data.json()
             return data
@@ -78,7 +78,7 @@ function riskyetfs() {
     
   
         async function ftecValues() {
-            let url = "https://financialmodelingprep.com/api/v3/quote/FTEC?apikey=fd74172c1b79377487aaaeb7c3cdae69"
+            let url = "https://financialmodelingprep.com/api/v3/quote/FTEC?apikey=9939a36cee2d53e5327b9ae07d8ed797"
             let data = await fetch(url)
             data = await data.json()
             return data
@@ -101,7 +101,7 @@ function riskyetfs() {
         })        
     
         async function kompValues() {
-            let url = "https://financialmodelingprep.com/api/v3/quote/KOMP?apikey=fd74172c1b79377487aaaeb7c3cdae69"
+            let url = "https://financialmodelingprep.com/api/v3/quote/KOMP?apikey=9939a36cee2d53e5327b9ae07d8ed797"
             let data = await fetch(url)
             data = await data.json()
             return data
@@ -124,7 +124,7 @@ function riskyetfs() {
     
     
         async function qqqValues() {
-            let url = "https://financialmodelingprep.com/api/v3/quote/QQQ?apikey=fd74172c1b79377487aaaeb7c3cdae69"
+            let url = "https://financialmodelingprep.com/api/v3/quote/QQQ?apikey=9939a36cee2d53e5327b9ae07d8ed797"
             let data = await fetch(url)
             data = await data.json()
             return data
@@ -146,7 +146,7 @@ function riskyetfs() {
         })    
     
         async function smhValues() {
-            let url = "https://financialmodelingprep.com/api/v3/quote/SMH?apikey=fd74172c1b79377487aaaeb7c3cdae69"
+            let url = "https://financialmodelingprep.com/api/v3/quote/SMH?apikey=9939a36cee2d53e5327b9ae07d8ed797"
             let data = await fetch(url)
             data = await data.json()
             return data
@@ -168,7 +168,7 @@ function riskyetfs() {
         })   
     
         async function vtValues() {
-            let url = "https://financialmodelingprep.com/api/v3/quote/VT?apikey=fd74172c1b79377487aaaeb7c3cdae69"
+            let url = "https://financialmodelingprep.com/api/v3/quote/VT?apikey=9939a36cee2d53e5327b9ae07d8ed797"
             let data = await fetch(url)
             data = await data.json()
             return data
@@ -191,7 +191,7 @@ function riskyetfs() {
     
         
             async function vtvValues() {
-                let url = "https://financialmodelingprep.com/api/v3/quote/VTV?apikey=fd74172c1b79377487aaaeb7c3cdae69"
+                let url = "https://financialmodelingprep.com/api/v3/quote/VTV?apikey=9939a36cee2d53e5327b9ae07d8ed797"
                 let data = await fetch(url)
                 data = await data.json()
                 return data
