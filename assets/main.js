@@ -14,8 +14,11 @@ import pittValues from "./pitt.js";
 import clooneyValues from "./clooney.js";
 import streepValues from "./streep.js";
 import mixChart from "./fundsgraph.js";
-import getNews from "./news.js"
-import { cxsePrices, esgvPrices, ftecPrices, kompPrices, qqqPrices, smhprices, vtPrices, vtvPrices, drawChart } from "./riskyetfs.js"
+import getNews from "./news.js" 
+import riskyetfs from "./riskyetfs.js"
+
+
+
 
 getNews()
  
@@ -193,12 +196,14 @@ funds.addEventListener("click", () => {
     </div>
 </div>`
 
-    //riskyValues()
-    //pittValues()
-    //clooneyValues()
-    //streepValues()
-    //mixChart()
+    riskyValues()
+    pittValues()
+    clooneyValues()
+    streepValues()
+    mixChart()
  })
+
+ 
 
  portfolio.addEventListener("click", () =>{
     section.innerHTML = `<div class="container-fluid">
@@ -254,12 +259,7 @@ funds.addEventListener("click", () => {
                             <td class="etfprice">8,59%</td>
                             <td class="etf" id="vtvprice"></td>                                    
                         </tr>
-                    </table>
-                    <div class="dailyresult">
-                        <p></p>
-                        <h1 class="etftitle">Resultado diario</h1>
-                        <p class="dailyprice">-0,01%</p>
-                    </div>                          
+                    </table>                                             
                 </div>
             </div>
         </div>
@@ -272,14 +272,5 @@ funds.addEventListener("click", () => {
     </div>
 </div>`
 
-cxsePrices()
- esgvPrices()
- ftecPrices()
- kompPrices()
- qqqPrices()
- smhprices()
- vtPrices()
- vtvPrices()
- usdValue()
- drawChart()
+ riskyetfs() 
  })

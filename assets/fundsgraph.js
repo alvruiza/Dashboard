@@ -61,8 +61,7 @@ function mixChart() {
             legend: {
                 display: true
             },
-            tension: 0.0,
-            fill: "origin",
+            tension: 0.0,            
         }
     }
     
@@ -108,7 +107,7 @@ function mixChart() {
             return values
             })
 
-            data.datasets[0].data = getValues.reverse()
+            data.datasets[3].data = getValues.reverse()
         
         }
         getValues()
@@ -157,12 +156,12 @@ function mixChart() {
 
         }
         getValues()
-    })
-
+    })   
+    
     
 }
 
 
 
 
-export default mixChart()
+export default mixChart
